@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Service - Daniels MrP Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div id="logo">
+    <img src="photo_2025-02-1-01-37-00.jpg" alt="Logo" id="logo-img">
+    
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="request-service.html">Request Service</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section>
+      <h1>Request a Service</h1>
+      <form id="request-form" action="YOUR_GOOGLE_APPS_SCRIPT_URL" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" name="name" id="name" required><br>
+
+        <label for="email">Your Email</label>
+        <input type="email" name="email" id="email" required><br>
+
+        <label for="service">Select a Service</label>
+        <select name="service" id="service" required>
+          <option value="Web Development">Web Development</option>
+          <option value="Software Installation">Software Installation</option>
+          <option value="Graphics and Design">Graphics and Design</option>
+          <option value="Website Hosting">Website Hosting</option>
+          <option value="Camera Installation">Camera Installation</option>
+        </select><br>
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" required></textarea><br>
+
+        <button type="submit">Request Service</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

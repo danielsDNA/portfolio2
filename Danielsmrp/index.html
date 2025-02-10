@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniels' IT Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="photo_2025-02-1-01-37-00.jpg" alt="Logo" id="logo-img">
+            <h1>Daniels' Portfolio</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to My IT Portfolio</h2>
+        <p>I am Daniels, your IT personnel with a lot of tech skills at hand.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="photo_2025-02-1-01-39-15.jpg" alt="Logo" id="logo-img">
+        <p>I'm an IT Personnel and Computer Scientist with expertise in Web Development, Software Installation, Graphics Design, Camera Installation, and much more. I aim to provide solutions that enhance your business and personal technology.</p>
+        
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <img src="photo_2025-02-10_01-39-37.jpg" alt="Web Development">
+            <h3>Web Development</h3>
+            <p>Building responsive and functional websites.</p>
+            <a href="#contact" class="service-request">Request this service</a>
+        </div>
+        <div class="service">
+            <img src="photo_2025-02-10_01-58-07.jpg" alt="Software Installation">
+            <h3>Software Installation</h3>
+            <p>Installing and configuring software for your needs.</p>
+            <a href="#contact" class="service-request">Request this service</a>
+        </div>
+        <div class="service">
+            <img src="photo_2025-02-10_01-39-28.jpg" alt="Graphics Design">
+            <h3>Graphics Design</h3>
+            <p>Creating stunning designs for logos and branding.</p>
+            <a href="#contact" class="service-request">Request this service</a>
+        </div>
+        <div class="service">
+            <img src="photo_2025-02-10_01-38-37.jpg" alt="Graphics Design">
+            <h3>Camera installations</h3>
+            <p>Secure your teritories.</p>
+            <a href="#contact" class="service-request">Request this service</a>
+        </div>
+        <div class="service">
+            <img src="photo_2025-02-10_01-38-01.jpg" alt="Graphics Design">
+            <h3>Web hosting and domain purchase</h3>
+            <p>Make your brand accessible remotely</p>
+            <a href="#contact" class="service-request">Request this service</a>
+        </div>
+        <div class="service">
+            <img src="photo_2025-02-10_01-39-28.jpg" alt="Graphics Design">
+            <h3>Want to learn any of the Above?</h3>
+            <p>feel free to Contact</p>
+            <a href="#contact" class="service-request">Request this service</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea><br>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Daniels. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let formData = new FormData(this);
+    let url = "https://script.google.com/macros/s/AKfycbw2zt8M5vSv4G4ovuoVolN7u5CBtb86MMOMkyLx38lnbgnzFCB00qUTyBvxdh7P0DPWfw/exec"; // Replace with your actual URL
+
+    fetch(url, {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+    })
+    .catch(error => {
+        alert("Error sending message: " + error);
+    });
+});
+</script>
+
+</body>
+</html>

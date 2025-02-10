@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Daniels MrP Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div id="logo">
+    <img src="photo_2025-02-1-01-37-00.jpg" alt="Logo" id="logo-img">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="request-service.html">Request Service</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section>
+      <h1>Contact Me</h1>
+      <form id="contact-form" action="https://script.google.com/home/projects/1NusFu7E3fAOj4SrFRbT87o3nAZB27QXDkeUDqW1wn7J6HSuJ60Jzi-bO/edit" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" name="name" id="name" required><br>
+
+        <label for="email">Your Email</label>
+        <input type="email" name="email" id="email" required><br>
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" required></textarea><br>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/scripts.js"></script>
+  <script>
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let formData = new FormData(this);
+    let url = "https://script.google.com/macros/s/AKfycbw2zt8M5vSv4G4ovuoVolN7u5CBtb86MMOMkyLx38lnbgnzFCB00qUTyBvxdh7P0DPWfw/exec"; // Replace with your actual URL
+
+    fetch(url, {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+    })
+    .catch(error => {
+        alert("Error sending message: " + error);
+    });
+});
+</script>
+</body>
+</html>
